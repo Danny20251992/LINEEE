@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Gráfico: Línea de Tiempo del Paro Ecuador 2025 - Perspectiva de Seguridad</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide-icons"></script>
+
+    <!-- Configuración del font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+        
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a1a;
+            color: #F9FAFB;
+        }
+        /* Fondo Animado */
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-bg {
+            background: radial-gradient(circle at 10% 20%, rgba(58, 129, 246, 0.4), transparent 40%),
+                        radial-gradient(circle at 80% 90%, rgba(139, 92, 246, 0.4), transparent 40%),
+                        radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.3), transparent 50%);
+            background-color: #0a0a1a;
+            background-size: 400% 400%;
+            animation: moveGradient 20s ease-in-out infinite;
+        }
+        /* Estilo Glassmorphism */
+        .glass-card {
+            background-color: rgba(10, 10, 26, 0.6);
+            backdrop-filter: blur(14px) saturate(140%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        /* Línea de Tiempo */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #10b981);
+            border-radius: 2px;
+            transform: translateX(-50%);
+        }
+        /* Acordeón */
+        .accordion-content {
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative min-h-screen text-gray-200 p-4 sm:p-6 md:p-8 font-sans overflow-x-hidden">
+        <!-- Fondo animado -->
+        <div class="absolute inset-0 -z-10 h-full w-full animated-bg"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Encabezado -->
+            <header class="glass-card mb-12 p-8 text-center">
+                <div class="flex justify-center items-center gap-x-8 mb-6">
+                    <img src="https://github.com/Danny20251992/Protocolo-final/blob/main/img/images.png?raw=true" alt="Escudo Policía Nacional del Ecuador" class="h-24 object-contain transition-all duration-300 filter drop-shadow-[0_0_8px_rgba(58,129,246,0.6)] hover:drop-shadow-[0_0_16px_rgba(58,129,246,1)] hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/96x96/1f2937/ffffff?text=PNE';">
+                    <img src="https://github.com/Danny20251992/Protocolo-final/blob/main/img/DIGIN_logo-removebg-preview.png?raw=true" alt="Logo DIGIN" class="h-24 object-contain transition-all duration-300 filter drop-shadow-[0_0_8px_rgba(139,92,246,0.6)] hover:drop-shadow-[0_0_16px_rgba(139,92,246,1)] hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/96x96/1f2937/ffffff?text=DIGIN';">
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 mb-2">
+                    Línea de Tiempo del Paro Nacional (2025)
+                </h1>
+                <p class="text-gray-300 text-lg font-medium mt-2">
+                    Análisis de la Progresión del Conflicto y Acciones para la Restauración del Orden
+                </p>
+            </header>
+            
+            <!-- Dashboard de Situación Actual -->
+            <section id="dashboard" class="mb-12">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-200">Panel de Situación</h2>
+                <div class="flex justify-center mb-8">
+                    <div class="w-full max-w-sm">
+                        <div class="metric-card bg-gray-900/50 p-6 rounded-2xl border border-gray-700/50 shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-cyan-500/20 hover:border-cyan-500/50">
+                             <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-semibold text-gray-300">Cierres en Imbabura</h3>
+                                <i data-lucide="road-off" class="w-6 h-6 text-cyan-400"></i>
+                            </div>
+                            <p class="text-6xl font-extrabold text-white mt-4">15</p>
+                            <p class="text-sm text-gray-400 mt-2">Principal foco de alteración del orden público.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detalles Desplegables (Acordeón) -->
+                <div class="max-w-3xl mx-auto space-y-4">
+                     <div class="accordion-item bg-gray-900/50 rounded-lg border border-gray-700/50 overflow-hidden">
+                        <button onclick="toggleAccordion(this)" class="w-full p-4 flex justify-between items-center text-md font-semibold text-gray-200 hover:bg-gray-800/50 transition-colors">
+                            <span class="flex items-center gap-2"><i data-lucide="map-pinned" class="w-5 h-5 text-cyan-400"></i>Detalle de Cierres Viales por Provincia</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-4 text-sm text-gray-300 border-t border-gray-700/50 space-y-3">
+                                <p><strong>CARCHI (3):</strong> Bolívar/El Izal, Montúfar/Piquiucho, Montúfar/Mascarilla.</p>
+                                <p><strong>IMBABURA (15):</strong> Otavalo (Ilumán, Peguche, Quichinche, Magdalena, Eugenio Espejo, Huaycopungo, Gonzáles Suárez, San Rafael, Quinde, Selva Alegre), Antonio Ante (San Roque, San Vicente), Urcuquí/Coñaquí, Ibarra/Galo Plaza Lasso, Cotacachi.</p>
+                                <p><strong>PICHINCHA (5):</strong> Pedro Moncayo (Cajas Jurídico, Loma Gorda), Cayambe (San Isidro de Cajas, Florencia Bajo, Santa María Milán).</p>
+                                <p><strong>PASTAZA (1):</strong> Parroquia Canelos (Vigilia).</p>
+                                <p><strong>LOJA (3):</strong> Puente Sinincapac, Saraguro (Parque La Madre, San Vicente).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-gray-900/50 rounded-lg border border-gray-700/50 overflow-hidden">
+                        <button onclick="toggleAccordion(this)" class="w-full p-4 flex justify-between items-center text-md font-semibold text-gray-200 hover:bg-gray-800/50 transition-colors">
+                            <span class="flex items-center gap-2"><i data-lucide="info" class="w-5 h-5 text-blue-400"></i>Situación en Imbabura Post-Paro</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-4 text-sm text-gray-300 border-t border-gray-700/50 space-y-3">
+                                <p><strong>Movilizaciones activas:</strong> Comunidades mantienen bloqueos en Otavalo, Cotacachi y zonas rurales, afectando transporte y comercio.</p>
+                                <p><strong>Desacuerdo con el Gobierno:</strong> Bases comunitarias no reconocen los acuerdos firmados el 15 de octubre entre dirigentes indígenas y el Gobierno.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contenedor de la Línea de Tiempo -->
+            <div id="timeline" class="timeline-container mx-auto max-w-5xl space-y-4 pb-16 relative">
+                <!-- Los eventos se inyectan aquí por JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Datos de la Línea de Tiempo ---
+        const events = [
+            { date: '12 Septiembre', category: 'GovtAction', title: 'Decisión para la Estabilidad Económica', details: 'El presidente Noboa anuncia una medida de ajuste económico responsable para reducir el déficit fiscal, implementando la focalización del subsidio al diésel.' },
+            { date: '13 Septiembre', category: 'GovtAction', title: 'Activación de Medidas Compensatorias', details: 'El Gobierno Nacional anuncia bonos compensatorios y traslada la sede de gobierno a Latacunga para garantizar la gobernabilidad ante la inminente paralización del servicio de transporte.' },
+            { date: '15 Septiembre', category: 'ProtestEscalation', title: 'Focos de Bloqueo y Reacción Ciudadana', details: 'Inician los primeros focos de alteración del orden público con bloqueos de vías. La CONAIE se suma a las acciones de presión.' },
+            { date: '18 Septiembre', category: 'ProtestEscalation', title: 'Convocatoria a la Paralización Ilegal', details: 'La CONAIE convoca a un paro nacional indefinido que amenaza la paz y el abastecimiento nacional.' },
+            { date: '22 Septiembre', category: 'ProtestEscalation', title: 'Intento de Desestabilización General', details: 'El paro se formaliza con bloqueos de carreteras y los primeros intentos de confrontación contra la fuerza pública que busca mantener el orden.' },
+            { date: '24 Septiembre', category: 'GovtAction', title: 'Operación de Despliegue Estratégico', details: 'Las Fuerzas Armadas realizan un operativo estratégico a gran escala en Imbabura para garantizar la seguridad del Presidente y la libre circulación en la zona.' },
+            { date: '28 Septiembre', category: 'Conflict', title: 'Emboscada Violenta contra Convoy Presidencial', details: 'Un convoy de Estado y diplomáticos, liderado por el Presidente, fue brutalmente atacado por 350 personas con armas incendiarias y piedras en Imbabura. La FF.AA. refuerza el control.' },
+            { date: '29 Septiembre', category: 'Conflict', title: 'Reiteración de Ataque Organizado', details: 'Se produce una segunda emboscada organizada contra la comitiva de Estado en Imbabura. Se reportan daños materiales graves a los vehículos oficiales.' },
+            { date: '4 Octubre', category: 'GovtAction', title: 'Decreto para la Restauración del Orden', details: 'El Presidente decreta el Estado de Excepción en 10 provincias, medida constitucional indispensable para mitigar la grave conmoción interna y los bloqueos viales, mediante decreto 174' },
+            { date: '12 Octubre', category: 'ProtestEscalation', title: 'Vigésimo Día de Bloqueos Sistemáticos', details: 'El paro se prolonga 20 días, con Imbabura como principal foco de alteración. La Fuerza Pública mantiene una fuerte presencia para la protección ciudadana.' },
+            { date: '13 Octubre', category: 'GovtAction', title: 'Movilización Masiva para el Despeje Vial', details: 'Se despliega un convoy de 1.000 militares y policías desde Quito hacia Imbabura para garantizar el envío de insumos esenciales y la libre circulación.' },
+            { date: '14 Octubre', category: 'Conflict', title: 'Operativo de Control de Disturbios en Otavalo', details: 'La Fuerza Pública neutraliza un ataque a un convoy humanitario en Otavalo, resultando en fuertes enfrentamientos. Se logra la detención de 43 protestantes por vandalismo y agresión.' },
+            { date: '15 Octubre', category: 'GovtAction', title: 'Extensión de la Medida de Seguridad', details: 'El Presidente mantiene el Estado de Excepción para asegurar el restablecimiento total del orden y proteger los derechos constitucionales.' },
+            { date: '16 Octubre', category: 'GovtAction', title: 'Gestión de Diálogo y Pacificación', details: 'Los 43 aprehendidos son liberados como un gesto del Gobierno Nacional, promoviendo el diálogo con la dirigencia indígena para lograr la paz.' }
+        ];
+
+        const categoryMap = {
+            'GovtAction': { color: 'bg-blue-500', icon: 'zap', ring: 'ring-blue-700' },
+            'ProtestEscalation': { color: 'bg-yellow-500', icon: 'alert-triangle', ring: 'ring-yellow-700' },
+            'Conflict': { color: 'bg-red-600', icon: 'swords', ring: 'ring-red-800' }
+        };
+
+        function renderTimelineCard(event, index) {
+            const { color, icon, ring } = categoryMap[event.category];
+            const isLeft = index % 2 === 0;
+            const alignmentClass = isLeft ? 'md:mr-auto' : 'md:ml-auto';
+            const timelinePinClass = isLeft ? 'md:left-1/2 md:-ml-2.5' : 'md:left-1/2 md:-ml-2.5';
+            const arrowClass = isLeft ? 'md:border-l-0 md:border-r-[15px] md:border-r-gray-800/80 md:left-full' : 'md:border-r-0 md:border-l-[15px] md:border-l-gray-800/80 md:right-full';
+            
+            return `
+                <div class="relative w-full md:w-1/2 ${alignmentClass} mb-8">
+                    <!-- Pin en la línea de tiempo -->
+                    <div class="absolute top-2 ${timelinePinClass} z-10">
+                        <div class="h-5 w-5 rounded-full ${color} ring-4 ${ring} flex items-center justify-center shadow-lg">
+                           <i data-lucide="${icon}" class="w-3 h-3 text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta de Evento -->
+                    <div class="glass-card p-5 ml-8 md:ml-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.01] relative">
+                        <!-- Flecha Conectora -->
+                        <div class="absolute top-3 h-0 w-0 border-y-[10px] border-y-transparent ${arrowClass} hidden md:block"></div>
+                        
+                        <div class="flex items-center gap-4 mb-2">
+                            <h3 class="font-extrabold text-xl text-gray-100">${event.title}</h3>
+                        </div>
+                         <p class="text-sm font-semibold text-teal-300 mb-2">${event.date}</p>
+                        <p class="text-sm text-gray-400 leading-relaxed">${event.details}</p>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // --- Funciones de Interacción ---
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const chevron = button.querySelector('.accordion-chevron');
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                chevron.style.transform = 'rotate(0deg)';
+            } else {
+                // Opcional: Cierra otros acordeones abiertos
+                document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+                document.querySelectorAll('.accordion-chevron').forEach(ch => ch.style.transform = 'rotate(0deg)');
+
+                content.style.display = "block";
+                chevron.style.transform = 'rotate(180deg)';
+            }
+        }
+        
+        // --- Carga Inicial ---
+        window.onload = function() {
+            const timelineContainer = document.getElementById('timeline');
+            let htmlContent = '';
+            events.forEach((event, index) => {
+                htmlContent += renderTimelineCard(event, index);
+            });
+            timelineContainer.innerHTML = htmlContent;
+
+            // Reemplaza los placeholders de lucide-icons
+            lucide.createIcons();
+        };
+    </script>
+</body>
+</html>
+
